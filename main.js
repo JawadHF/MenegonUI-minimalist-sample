@@ -50,55 +50,46 @@ cancelBtn.addEventListener("click", () => {
     desktopNav.classList.remove("move-down");
 })
 
+// Parallal with Intersection Observer and scroll
+/*
+let io_observer = new IntersectionObserver(activateParallaxOnSection, {});
 
-// Parallax animation on Scroll 
-// window.addEventListener("mousemove", parallax);
-window.addEventListener("scroll", parallax);
-const parallaxElements = document.querySelectorAll(".product-section-scaling-container");
-console.log(parallaxElements);
+document.querySelectorAll(".product-section")
+.forEach(productSection => {
+    io_observer.observe(productSection);
+    //console.log("watching", productSection.textContent);
+});
 
-function parallax(event) {
-    /*
-    document.querySelectorAll(".product-section-scaling-container").forEach((parallaxElement) => {
-        const position = parallaxElement.getAttribute("value");
-        
-        //const x = (window.innerWidth - event.pageX * position) / 90;
-        //const y = (window.innerHeight - event.pageY * position) / 90;
-
-        //parallaxElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
-        
-       console.log("position = "+position);
-       console.log("parallax style: "+parallaxElement.style.transform);
-
-    });
-    */
-
-    for (const parallaxEl of parallaxElements) {
-        console.log('offset: ' +this.pageYOffset);
-        console.log(parallaxEl.style);
-        console.log('before: '+getComputedStyle(parallaxEl).getPropertyValue('transform'));
-        const yTransform = this.pageYOffset;
-        console.log('y Offset :'+yTransform);
-
-
-        // const x = (window.innerWidth - event.pageX * 5) / 90;
-        // const y = (window.innerHeight - event.pageY * 5) / 90;
-        // console.log('x :'+x);
-        // console.log('y :'+y);
-
-
-        parallaxEl.style.setProperty('transform', 'matrix(1, 0, 0, 1, 0, -'+yTransform+')');
-        console.log('after: '+getComputedStyle(parallaxEl).getPropertyValue('transform'));
-        /*
-        const direction = parallaxEl.dataset.direction == "up" ? "-" : "";
-        const transformY = this.pageYOffset * parallaxEl.dataset.speed;
-        if (parallaxEl.classList.contains("banner-title")) {
-          parallaxEl.style.transform = `translate3d(0,${direction}${transformY}px,0) rotate(-6deg)`;
-        } else if (parallaxEl.classList.contains("banner-subtitle")) {
-          parallaxEl.style.transform = `translate3d(0,${direction}${transformY}px,0) rotate(-3deg)`;
-        } else {
-          parallaxEl.style.transform = `translate3d(0,${direction}${transformY}px,0)`;
+async function activateParallaxOnSection(elements, ob) {
+    console.log("Hit observer point");
+    elements.forEach(async element => {
+        if (element.isIntersecting) {
+            console.log("intersecting");
+            console.log(element.target);
+            if(element.target.tagName == 'SCALING-CONTAINER') {}
+            //animateParallax(element);
+            window.addEventListener('scroll', animateParallax);
+            ob.unobserve(element.target);
         }
-        */
-      }
+        else {
+            //window.removeEventListener('scroll', animateParallax);
+        }
+    });
 }
+
+function animateParallax(element) {
+    console.log('Element: '+element.currentTarget);
+    console.log('Offset: '+element.offsetTop);
+    const yTransform = this.pageYOffset;
+    console.log(yTransform);
+    const elementToAnimate = element.target.querySelector(".product-section-scaling-container");
+    console.log(elementToAnimate);
+    console.log('elementToAnimate Offset: '+elementToAnimate.offsetTop);
+    
+    console.log('before: '+getComputedStyle(elementToAnimate).getPropertyValue('transform'));
+    //elementToAnimate.style.setProperty('transform', 'matrix(1, 0, 0, 1, 0, -'+yTransform+')');
+    if(yTransform < 100){
+        elementToAnimate.style.setProperty('transform', 'translateY(-'+yTransform+'px)');
+    }
+}
+*/
