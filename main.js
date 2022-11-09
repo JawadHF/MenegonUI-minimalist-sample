@@ -20,6 +20,8 @@ overlay.addEventListener("click", () => {
     desktopNav.classList.remove("hide");
     searchContainer.classList.add("hide");
     overlay.classList.remove("show");
+
+    chevronListItem.classList.remove("inverted");
 })
 
 
@@ -49,6 +51,33 @@ cancelBtn.addEventListener("click", () => {
     nav.classList.remove("move-up");
     desktopNav.classList.remove("move-down");
 })
+
+//const chevronShowSubmenuButton = document.getElementById("submenu-chevron");
+const chevronListItem = document.getElementById("chevron-list-item");
+const submenuDetails = document.querySelector(".product-submenu-details-dropdown");
+
+//const submenuOverlay = document.querySelector(".submenu-overlay");
+let submenuOpen = false
+
+
+chevronListItem.addEventListener("click", () => {
+    toggleSubmenu();
+})
+
+function toggleSubmenu() {
+    if(submenuOpen == false) {
+        submenuOpen = true;
+        //submenuOverlay.classList.add("show");
+        chevronListItem.classList.add("inverted");
+        submenuDetails.classList.add("show");
+    }
+    else {
+        submenuOpen = false;
+        //submenuOverlay.classList.remove("show");
+        chevronListItem.classList.remove("inverted");
+        submenuDetails.classList.remove("show");
+    }
+}
 
 // Parallal with Intersection Observer and scroll
 /*
