@@ -1310,10 +1310,19 @@ picture source {
 
 
 /* === */
+
+.product-comparison-chart h2 {
+    font-size: 56px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    text-align: center;
+}
+
 .product-comparison-chart-grid {
     --row-gap: 7px;
-    --column-gap: 34px;
-    margin-top: var(--compare-grid-margin-top);
+    --column-gap: 2rem;
+    margin-top: 4rem;
     /* max-width: 940px; */
     margin-left: auto;
     margin-right: auto;
@@ -1700,5 +1709,41 @@ footer #footer-copyright {
         /* left: 0; */
         /* top: 0; */
         z-index: 2;
+    }
+
+    /* ==== */
+
+    .tile-padded {
+        padding: 0.2rem;
+    }
+
+    .product-comparison-chart h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    }
+
+    .product-comparison-chart-grid {
+        --row-gap: 11px;
+        --column-gap: 10px;
+        margin-top: 4rem;
+        /* max-width: 280px; */
+        
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(9,auto);
+        /* grid-auto-flow: column; */
+    }
+
+    .product-comparison-sku-tagline {
+        font-size: 12px;
+    }
+
+    .product-comparison-chart-tile {
+        grid-column: 1/3;
+    }
+
+    .product-comparison-chart-tile:nth-child(3n+1):nth-child(2n), .product-comparison-chart-tile:nth-child(3n+2):nth-child(odd), .product-comparison-chart-tile:nth-child(3n+3):nth-child(2n) {
+        grid-column: 3/5;
     }
 }
