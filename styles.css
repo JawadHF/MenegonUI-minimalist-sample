@@ -1308,6 +1308,262 @@ picture source {
     display: none;
 }
 
+/* === */
+
+.product-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+
+.product-intro-image img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+
+    object-fit: contain;
+}
+
+.product-intro-text {
+    text-align: center;
+}
+
+.product-intro-text .subheadline {
+    font-size: 64px;
+    line-height: 1.109375;
+    font-weight: 600;
+    letter-spacing: -0.0025em;
+}
+
+.product-intro-text>p {
+    font-size: 19px;
+    line-height: 1.4211026316;
+    font-weight: 400;
+    /* letter-spacing: .0075em; */
+    margin: 2rem 0;
+}
+
+#product-compare-link {
+    font-size: 19px;
+}
+
+/* === */
+
+.section-content {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.section-content img {
+    width: 100%;
+    height: auto;
+}
+
+#smokendust {
+    object-fit: contain;
+    height: 500px;
+}
+
+.cleanupdust {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+}
+
+#cleanupdust {
+    object-fit: contain;
+    height: 200px;
+    width: 500px;
+}
+
+.showcase-modular-filter h2 {
+    margin-bottom: 47px;
+
+    font-size: 96px;
+    line-height: 1.0416666667;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.showcase-modular-filter p {
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+
+    color: #86868b;
+}
+
+.showcase-modular-filter p strong {
+    color: #000;
+}
+
+.dark-section {
+    background-color: #000;
+    color: #a1a1a6;
+    ;
+}
+
+.product-part-detail h2 {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+
+    color: #FFF;
+
+    margin-bottom: 60px;
+}
+
+.product-part-detail-juxtapose {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 7rem 0px;
+}
+
+.product-part-detail-juxtapose-image {
+    flex: 1;
+}
+
+.product-part-detail-juxtapose-image img {
+    max-width: 50vw;
+    object-fit: contain;
+}
+
+.product-part-detail-juxtapose-description {
+    flex: 1;
+
+    margin: auto 0;
+    padding: 4rem;
+}
+
+.colourful-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding: 3rem 0;
+}
+
+.colourful-stat {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 2rem;
+}
+
+.colourful-stat-spec {
+    /* Fallback: Set a background color. */
+    background-color: rgb(var(--lightest-grey), 1);
+
+    /* Create the gradient. */
+    background-image: linear-gradient(135deg,
+            rgba(253, 105, 144, 1) 0%,
+            rgba(9, 9, 121, 1) 59%,
+            rgba(0, 212, 255, 1) 100%);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.colourful-stat-number {
+    display: inline;
+
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.colourful-stat-unit {
+    display: inline;
+
+    font-size: 32px;
+}
+
+.colourful-stat-spec-description {
+    font-size: 14px;
+    line-height: 1.2857742857;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+
+    color: #FFF;
+}
+
+.product-part-detail-juxtapose-description p,
+.product-part-detail-juxtapose-footer p {
+    font-size: 32px;
+    line-height: 1.1904761905;
+    font-weight: 600;
+    letter-spacing: .011em;
+}
+
+.product-part-detail-juxtapose-description p strong,
+.product-part-detail-juxtapose-footer p strong {
+    color: #FFF;
+}
+
+#product-part-detail-juxtapose-description-small {
+    font-size: 21px;
+    line-height: 1.1904761905;
+    font-weight: 600;
+    letter-spacing: .011em;
+}
+
+.product-part-footer {
+    padding: 5rem;
+}
+
+/* === */
+
+.image-overlay-container {
+    position: relative;
+}
+
+.image-overlay-container img {
+    object-fit: contain;
+}
+
+.image-overlay-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #F5F5F7;
+    text-align: center;
+}
+
+.image-overlay-text h3 {
+    font-size: 48px;
+    line-height: 1.0834933333;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+
+    padding: 2rem;
+}
+
+.image-overlay-text p {
+    font-size: 21px;
+    font-weight: 400;
+}
 
 /* === */
 
@@ -1327,8 +1583,8 @@ picture source {
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-row-gap: var(--row-gap);
     grid-column-gap: var(--column-gap);
     grid-auto-flow: column;
@@ -1361,7 +1617,7 @@ picture source {
 .product-comparison-sku-image img {
     max-height: 200px;
     /* width: 50px; */
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .product-comparison-sku-title {
@@ -1406,6 +1662,62 @@ picture source {
     padding-bottom: 30px;
     margin-top: 16px;
     border-bottom: 1px solid var(--footer-border-color);
+}
+
+/* Always be Closing */
+
+.abc-section {
+    background-color: var(--grey-background-colour);
+    color: rgba(var(--dark-text), 1);
+}
+
+.abc-strip {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 56px;
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -.016em;
+}
+
+.abc-strip img {
+    height: 50px;
+    width: 50px;
+}
+
+.abc-strip a {
+    text-decoration: none;
+    color: rgba(var(--dark-text), 1);
+}
+
+.abc-strip .info-link {
+    margin-top: 0.8em;
+    padding-top: 0.8em;
+    font-size: 14px;
+}
+
+.abc-info {
+    margin: 0 auto;
+    padding-top: 56px;
+    position: relative;
+    text-align: center;
+    width: 216px;
+    z-index: 1;
+}
+
+.abc-info h3 {
+    margin-top: 0.525em;
+}
+
+.abc-info p {
+    margin-top: 0.4em;
 }
 
 /* Social Media links */
@@ -1535,7 +1847,8 @@ footer #footer-copyright {
     padding-bottom: 10px;
 }
 
-@media(max-width: 600px) {
+/* @media(max-width: 600px) { */
+@media screen and (width < 600px) {
 
     .wrapper {
         /* max-width: 900px;
@@ -1595,6 +1908,14 @@ footer #footer-copyright {
 
     .product-section-tile {
         min-height: 500px;
+    }
+
+    .product-section-tile img {
+        object-fit: contain;
+    }
+
+    #modular-filter-system-see-through {
+        max-height: 300px;
     }
 
     .product-section-content h2 {
@@ -1711,6 +2032,64 @@ footer #footer-copyright {
         z-index: 2;
     }
 
+    /* === */
+    .product-intro {
+        flex-direction: column;
+    }
+
+    .product-intro-image img {
+        height: 250px;
+    }
+
+    .product-intro-image .subheadline {
+        font-size: 48px;
+        line-height: 1.0834933333;
+        font-weight: 600;
+        letter-spacing: -0.003em;
+    }
+
+    /* === */
+
+    .section-content {
+        max-width: 300px;
+    }
+
+    .showcase-modular-filter h2 {
+        font-size: 48px;
+    }
+
+    #smokendust {
+        height: 250px;
+    }
+
+    .product-part-detail-juxtapose {
+        flex-direction: column;
+    }
+
+    .product-part-detail-juxtapose-image img {
+        max-width: 100vw;
+    }
+
+    .product-part-detail-juxtapose-description {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .product-part-detail-juxtapose-description p,
+    .product-part-detail-juxtapose-footer p {
+        font-size: 21px;
+        padding: 1rem;
+    }
+
+    .product-part-footer {
+        padding: 2rem;
+    }
+
+    #welding-smoke {
+        max-height: 500px;
+    }
+
     /* ==== */
 
     .tile-padded {
@@ -1718,10 +2097,10 @@ footer #footer-copyright {
     }
 
     .product-comparison-chart h2 {
-    font-size: 40px;
-    line-height: 1.1;
-    font-weight: 600;
-    letter-spacing: 0em;
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0em;
     }
 
     .product-comparison-chart-grid {
@@ -1729,9 +2108,9 @@ footer #footer-copyright {
         --column-gap: 10px;
         margin-top: 4rem;
         /* max-width: 280px; */
-        
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(9,auto);
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, auto);
         /* grid-auto-flow: column; */
     }
 
@@ -1743,7 +2122,53 @@ footer #footer-copyright {
         grid-column: 1/3;
     }
 
-    .product-comparison-chart-tile:nth-child(3n+1):nth-child(2n), .product-comparison-chart-tile:nth-child(3n+2):nth-child(odd), .product-comparison-chart-tile:nth-child(3n+3):nth-child(2n) {
+    .product-comparison-chart-tile:nth-child(3n+1):nth-child(2n),
+    .product-comparison-chart-tile:nth-child(3n+2):nth-child(odd),
+    .product-comparison-chart-tile:nth-child(3n+3):nth-child(2n) {
         grid-column: 3/5;
+    }
+}
+
+
+/* iPad  */
+@media screen and (width >=600px) and (width < 900px) {
+
+    .product-comparison-chart-grid {
+        --row-gap: 11px;
+        --column-gap: 10px;
+        margin-top: 4rem;
+        /* max-width: 280px; */
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, auto);
+        /* grid-auto-flow: column; */
+    }
+
+    .product-comparison-sku-tagline {
+        font-size: 12px;
+    }
+
+    .product-comparison-chart-tile {
+        grid-column: 1/3;
+    }
+
+    .product-comparison-chart-tile:nth-child(3n+1):nth-child(2n),
+    .product-comparison-chart-tile:nth-child(3n+2):nth-child(odd),
+    .product-comparison-chart-tile:nth-child(3n+3):nth-child(2n) {
+        grid-column: 3/5;
+    }
+
+}
+
+
+/* Webkit  */
+
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+
+    .product-submenu,
+    .product-submenu-details-dropdown.show {
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        background-color: rgba(255, 255, 255, 0.72);
     }
 }
