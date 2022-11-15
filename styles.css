@@ -976,6 +976,15 @@ video {
     overflow-x: scroll;
 }
 
+.product-image-submenu ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-image-submenu ul li a:hover {
+    color: var(--buy-button-blue-color);
+}
+
 .product-image-submenu-item {
     display: flex;
     flex-direction: column;
