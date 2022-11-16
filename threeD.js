@@ -24,9 +24,11 @@ function init() {
 
     camera = new PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
     camera.rotation.y = 45/180*Math.PI;
+    /*
     camera.position.x = 800;
     camera.position.y = 100;
-    camera.position.z = 100;
+    camera.position.z = 100;*/
+    camera.position.set(0, 10, 10);
     
     hlight = new AmbientLight(0x404040, 100);
     scene.add(hlight);
@@ -58,14 +60,15 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     controls = new OrbitControls(camera, renderer.domElement);
+    //controls.addEventListener('change', renderer);
     controls.addEventListener('change', render);
 
     document.body.appendChild(renderer.domElement);
 
     let loader = new GLTFLoader();
-    loader.load('/images/products/modular-filter-system/car.glb', function (glb) {
-        fpm = glb.scene.children[0];
-        fpm.scale.set(0.5, 0.5, 0.5);
+    loader.load('/images/products/modular-filter-system/FPM8.glb', function (glb) {
+        //fpm = glb.scene.children[0];
+        //fpm.scale.set(0.5, 0.5, 0.5);
         scene.add(glb.scene);
         animate();
     });
