@@ -1681,7 +1681,252 @@ picture source {
     border-bottom: 1px solid var(--footer-border-color);
 }
 
-/* Always be Closing */
+
+/* 
+=============================
+        SKU Page
+=============================
+*/
+
+.sku-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFF;
+}
+
+
+.sku-intro-hero {
+    /* height: 100vh;  */
+    text-align: center;
+}
+
+.sku-intro h2 {
+    font-size: 96px;
+    line-height: 1.0416666667;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sku-intro-hero img {
+    height: 70vh;
+    object-fit: contain;
+}
+
+.sku-intro p {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.sku-intro-hero-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10em;
+}
+
+.sku-intro-hero-description p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 0.4em;
+    margin-top: 0.8em;
+}
+
+/* === */
+
+/* .sku-features img {
+    height: 40vh;
+    object-fit: contain;
+} */
+
+.sku-features-grid {
+    height: 100vh;
+    margin: 5em;
+
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas: 
+    'f1  f2     f3   f4'
+    'f12 image image f5'
+    'f11 image image f6'
+    'f10  f9     f8  f7';
+
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: 240px auto auto 240px;
+
+    --stagger-delay: 100ms;
+}
+
+.sku-feature-grid-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+    background-color: rgba(var(--grey-background), 1);
+    /* color: #06c; */
+
+    animation: skuFeatureCardShow 700ms ease-out;
+    animation-fill-mode: backwards; /*Set elements to first key frame value i.e invisible in this case */
+}
+
+.sku-feature-grid-card h2 {
+    font-size: 72px;
+}
+
+.sku-feature-grid-card h3 {
+    font-size: 56px;
+    margin: 0;
+}
+
+.sku-feature-grid-card h4 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.sku-feature-grid-card h5 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.sku-feature-grid-card p {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+
+@keyframes skuFeatureCardShow {
+    from {
+        opacity: 0;
+        transform: scale(0.2);
+        filter: hue-rotate(180deg);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+}
+
+.sku-feature-grid-card:nth-child(1) {
+    grid-area: f1;
+    animation-delay: calc( 1 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(2) {
+    grid-area: f2;
+    animation-delay: calc( 2 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(3) {
+    grid-area: f3;
+    animation-delay: calc( 3 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(4) {
+    grid-area: f4;
+    animation-delay: calc( 4 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(5) {
+    grid-area: f5;
+    animation-delay: calc( 5 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(6) {
+    grid-area: f6;
+    animation-delay: calc( 6 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(7) {
+    grid-area: f7;
+    animation-delay: calc( 7 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(8) {
+    grid-area: f8;
+    animation-delay: calc( 8 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(9) {
+    grid-area: f9;
+    animation-delay: calc( 9 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(10) {
+    grid-area: f10;
+    animation-delay: calc( 10 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(11) {
+    grid-area: f11;
+    animation-delay: calc( 11 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:nth-child(12) {
+    grid-area: f12;
+    animation-delay: calc( 12 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card:last-child {
+    grid-area: image;
+    animation-delay: calc( 13 * var(--stagger-delay));
+}
+
+.sku-feature-grid-card img{
+    object-fit: contain;
+    height: 50vh;
+}
+
+
+.sku-feature-grid-card-vfd {
+    background-image: url(/images/frequency-dial.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sku-feature-grid-card-galvanized {
+    background-image: url(/images/galvanised.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    /* filter: blur(0.5px); */
+    /* backdrop-filter: blur(50px); */
+}
+
+.sku-feature-grid-card-mesh {
+    background-image: url(/images/blue-metal-mesh-plating.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+ 
+/* 
+=============================
+        Always be Closing 
+=============================
+*/
 
 .abc-section {
     background-color: var(--grey-background-colour);
@@ -1738,49 +1983,53 @@ picture source {
 }
 
 
- /* Compare Page  */
+/* 
+======================
+    Compare Page  
+======================
+*/
 
- .section-heading {
+.section-heading {
     margin-left: auto;
     margin-right: auto;
     width: 980px;
     margin-top: 84px;
     margin-bottom: 48px;
     text-align: center;
- }
+}
 
- .section-heading h1 {
+.section-heading h1 {
     font-size: 64px;
     line-height: 1.0625;
     font-weight: 600;
     letter-spacing: -.009em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
- }
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
 
- .section-heading a {
+.section-heading a {
     margin-top: 0.8em;
- }
+}
 
- .redirect-text p {
+.redirect-text p {
     margin-top: 0.8em;
-    
+
     font-size: 21px;
     line-height: 1.381;
     font-weight: 400;
     letter-spacing: .011em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
- }
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
 
- /* === */
- .flex-table {
+/* === */
+.flex-table {
     width: 100%;
     display: flex;
     flex-direction: column;
 
     overflow-x: scroll;
- }
+}
 
- .flex-table-row {
+.flex-table-row {
     width: 100%;
 
     display: flex;
@@ -1792,11 +2041,11 @@ picture source {
     column-gap: 30px;
 
     border-top: 1px solid var(--footer-border-color);
- }
+}
 
- .flex-table-heading-cell {
+.flex-table-heading-cell {
     flex: 1;
-    width:200px;
+    width: 200px;
     margin-top: 72px;
     margin-bottom: 52px;
 
@@ -1804,28 +2053,28 @@ picture source {
     line-height: 1.125;
     font-weight: 600;
     letter-spacing: .004em;
-    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
- }
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
- .flex-table-cell {
+.flex-table-cell {
     flex: 1;
-    width:200px;
+    width: 200px;
 
     padding-top: 3.6em;
     padding-bottom: 3.3em;
- }
+}
 
- .row-header {
+.row-header {
     font-size: 24px;
     line-height: 1.1666666667;
     font-weight: 600;
     letter-spacing: .009em;
-    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
- }
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
- .flex-table-cell strong{
+.flex-table-cell strong {
     font-weight: 600;
- }
+}
 
 /* Social Media links */
 .social-contacts {
@@ -2242,6 +2491,57 @@ footer #footer-copyright {
     .cell-6 {
         display: none;
     }
+
+
+    /* 
+    =============================
+            SKU Page
+    =============================
+    */
+    .sku-intro h2 {
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: 0em;
+    }
+
+    .sku-intro p {
+        font-size: 24px;
+        line-height: 1.1666666667;
+        letter-spacing: .009em;
+    }
+
+    /* === */
+
+    .sku-features-grid {
+        height: unset;
+        margin: 1em;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*
+        gap: 1rem;
+    
+        grid-template-areas: 
+        'f1  f2     f3   f4'
+        'f12 image image f5'
+        'f11 image image f6'
+        'f10  f9     f8  f7';
+    
+        grid-template-rows: repeat(4, 25%);
+        grid-template-columns: 240px auto auto 240px;
+    
+        --stagger-delay: 100ms;
+        */
+    }
+
+    .sku-feature-grid-card {
+        min-height: 150px;
+        /* min-width: 350px; */
+        width: 100%;
+    }
+
 }
 
 
