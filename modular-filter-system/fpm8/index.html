@@ -36,6 +36,7 @@
     <meta property="og:site_name" content="Oskar Air Products" />
 
     <script type="module" defer src="/main.js"></script>
+    <script defer src="/intersection-element.js"></script>
 </head>
 
 <body>
@@ -228,70 +229,73 @@
         </div>
     </section>
 
-    <section class="sku-features-section">
+    <section class="sku-features-section ">
         <div class="sku-features-grid">
             <!--img src="/images/products/modular-filter-system/FPM8_hero.png" alt="FPM 8 Large Image" /-->
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card hidden-card">
                 <img style="height: 50px;" src="/images/wind-48.png" alt="Mesh filter" />
                 <p>Up to</p>
                 <h4>16000m³/h</h4>
                 <p>Air Flow</p>
             </div>
 
-            <div class="sku-feature-grid-card">
-                <h2>8</h2>
+            <div class="sku-feature-grid-card hidden-card">
+                <h2><span class="colourful-stat-spec">8</span></h2>
                 <p>Main Filter Cartridges</p>
             </div>
 
-            <div class="sku-feature-grid-card">
-                <h2>4 x <img style="height: 50px;" src="/images/drawer-50.png" alt="Mesh filter" /></h2>
+            <div class="sku-feature-grid-card hidden-card">
+                <h2><span class="colourful-stat-spec">4</span> x <img style="height: 50px;" src="/images/drawer-50.png" alt="Mesh filter" /></h2>
                 <p>20dm³ dust collection drawers</p>
             </div>
 
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card hidden-card">
+                <img style="height: 50px;" src="/images/mesh-64.png" alt="Mesh filter" />
                 <p>Filter sizes from</p>
                 <h4>241.6m²</h4>
                 
             </div>
 
-            <div class="sku-feature-grid-card sku-feature-grid-card-vfd">
+            <div class="sku-feature-grid-card sku-feature-grid-card-vfd hidden-card">
                 <h3>VFD</h3>
                 <p>(Variable Frequency Drive) fan assemblies</p>
             </div>
 
-            <div class="sku-feature-grid-card">
-                <img style="height: 80px;" src="/images/dust-filter.png" alt="Mesh filter" />
+            <div class="sku-feature-grid-card hidden-card">
+                <img style="height: 80px;" src="/images/dust-filter.png" alt="Mesh pre-filter" />
                 <p>Modular inlet with Metal Mesh pre-filter</p>
             </div>
 
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card hidden-card">
+                <img style="height: 50px;" src="/images/swap-paths-64.png" alt="Modular system" />
                 <p>Modular Cartridge System</p>
             </div>
 
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card sku-feature-grid-card-mesh hidden-card">
+                <p class="dark-background-for-text">• Rigid welded frame •</p>
+                <p class="dark-background-for-text">• Reinforced with metal plating •</p>
+            </div>
+
+            <div class="sku-feature-grid-card hidden-card">
                 <p>Automatic Cartridge Cleaning System</p>
             </div>
 
-            <div class="sku-feature-grid-card sku-feature-grid-card-mesh">
-                <p>Rigid welded framing with reinforced metal plating</p>
+            <div class="sku-feature-grid-card sku-feature-grid-card-galvanized hidden-card">
+                <p class="dark-background-for-text">Galvanized and powder coated for corrosion protection</p>
             </div>
 
-            <div class="sku-feature-grid-card sku-feature-grid-card-galvanized">
-                <p>Galvanized and powder coated for corrosion protection</p>
-            </div>
-
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card hidden-card">
                 <img style="height: 55px;" src="/images/pillar-55.png" alt="Mesh filter" />
                 <p>Vertical filter cartridges</p>
             </div>
 
-            <div class="sku-feature-grid-card">
+            <div class="sku-feature-grid-card hidden-card">
                 <h2>XL</h2>
                 <p>Large capacity dust drawers</p>
             </div>
 
-            <div class="sku-feature-grid-card">
-                <img src="/images/products/modular-filter-system/FPM8_hero.png" alt="FPM 8 Large Image" />
+            <div class="sku-feature-grid-card hidden-card">
+                <img src="/images/products/modular-filter-system/FPM8.webp" alt="FPM 8 Large Image" />
             </div>
         </div>
     </section>
@@ -299,26 +303,24 @@
     <section class="product-section ar-section">
         <div class="product-section-wrapper section-width">
             <div class="product-section-tile section-tile tile-rounded">
+                
                 <div class="product-section-background">
                     <div class="product-section-scaling-container">
                         <picture class="product-section-picture">
-                            <source srcset="/images/icons/ar.png" media="(max-width: 734px)" type="">
-                            <source srcset="/images/icons/ar.png" media="(max-width: 1068px)" type="">
-                            <source srcset="/images/icons/ar.png" media="(min-width: 0px)" type="">
-                            <img src="/images/icons/ar.png" alt="Fume Extraction Arms Large Image">
+                            <!--source srcset="/images/icons/ar.png" media="(max-width: 734px)" type="">
+                            <source srcset="/images/icons/ar.png" media="(max-width: 1068px)" type="">s
+                            <source srcset="/images/icons/ar.png" media="(min-width: 0px)" type=""-->
+                            <img src="/images/products/modular-filter-system/FPM8_hero.png" alt="FPM 8 3D model">
                         </picture>
                     </div>
 
                 </div>
                 <div class="product-section-content">
-                    <h2 class="headline">Use AR to view the Modular Filter System</h2>
-                    <!--p class="subheadline">Clean Breathing Zone</p-->
-                    <p>Open this page using Safari on your iPhone or iPad.</p>
+                    <h2 class="headline dark-background-for-text three-dimensional-text">View in 3D</h2>
+                    <p>Open this page using Safari on your iPhone or iPad to view in AR.</p>
+                    <img src="/images/icons/ar.png" alt="Augmented Reality Icon">
                     <div class="info-links-inline product-section-info-links">
-                        <button class="buy-button">
-                            Buy
-                        </button>
-                        <a href="/product/info" class="info-link">Learn More ></a>
+                        <a href="/modular-filter-system/fpm8/3d/" class="info-link">View in browser ></a>
                     </div>
                 </div>
             </div>
