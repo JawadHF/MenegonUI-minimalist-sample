@@ -1911,6 +1911,7 @@ picture source {
     background-size: cover;
     background-repeat: no-repeat;
     color: #FFF;
+    font-weight: 700;
     /* filter: blur(0.5px); */
     /* backdrop-filter: blur(50px); */
 }
@@ -1920,6 +1921,50 @@ picture source {
     background-size: cover;
     background-repeat: no-repeat;
     color: #FFF;
+    font-weight: 700;
+}
+
+.dark-background-for-text {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    border-radius: 6px;
+}
+
+.three-dimensional-text {
+    padding: 3rem;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.hidden-card {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden-card {
+        transition: none;
+    }
+}
+
+.show-card {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
  
 /* 
