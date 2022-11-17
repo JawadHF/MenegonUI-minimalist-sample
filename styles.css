@@ -687,7 +687,7 @@ video {
 .main {
     padding-top: 50px;
     /* overflow: hidden; */
-    height: 90vh;
+    /* height: 100vh; */
 }
 
 .wrapper {
@@ -818,6 +818,10 @@ video {
 .buy-button:active {
     background-color: var(--buy-button-blue-color-active);
     color: white;
+}
+
+.info-links-footer {
+    margin-top: 2em;
 }
 
 .info-links-inline {
