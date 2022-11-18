@@ -3,7 +3,8 @@
 
 *,
 *::after,
-*::before {
+*::before,
+:root {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1159,6 +1160,7 @@ picture source {
 */
 
 
+
 /* Modular Filter System */
 .product-submenu {
     display: flex;
@@ -1496,10 +1498,11 @@ picture source {
     /* Use the text as a mask for the background. */
     /* This will show the gradient as a text color rather than element bg. */
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 .colourful-stat-number {
