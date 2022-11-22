@@ -1943,6 +1943,7 @@ picture source {
 .sku-feature-grid-card:last-child {
     grid-area: image;
     animation-delay: calc( 13 * var(--stagger-delay));
+    background-color: #fff;
 }
 
 .sku-feature-grid-card img{
@@ -2239,7 +2240,6 @@ picture source {
 
 
 footer {
-    grid-area: footer;
     height: auto;
     width: 100%;
     background-color: rgb(245, 245, 247);
@@ -2252,7 +2252,7 @@ footer {
     font-kerning: auto;
     left: 0px;
     bottom: 0px;
-    height: 260px;
+    /* height: 260px; */
     width: 100%;
     border-top: 1px solid var(--footer-border-color);
 }
