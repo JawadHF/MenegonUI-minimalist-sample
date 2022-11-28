@@ -20,14 +20,16 @@ body {
 	--color-link: #b07656;
 	--color-link-hover: #000;
 	--color-deco: #e4dbd6;
+  /*
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	 background-color: var(--color-bg); 
 	font-family: paralucent, sans-serif;
 	font-family: quiroh, sans-serif;
-	font-family: mr-eaves-xl-sans, sans-serif;
+	font-family: mr-eaves-xl-sans, sans-serif;*/
 }
 
 /* Page Loader */
+/*
 .js .loading::before {
 	content: '';
 	position: fixed;
@@ -55,12 +57,14 @@ body {
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 
+
 @keyframes loaderAnim {
 	to {
 		opacity: 1;
 		transform: scale3d(0.5,0.5,1);
 	}
 }
+
 
 a {
 	text-decoration: none;
@@ -73,6 +77,18 @@ a:focus {
 	color: var(--color-link-hover);
 	outline: none;
 }
+*/
+
+/*
+main {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+*/
 
 [data-scroll] {
 	will-change: transform;
@@ -157,41 +173,42 @@ a:focus {
 
 .item:first-child .item__img-wrap {
 	--aspect-ratio: 8/10;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/1.jpg);
+	--image: url(/images/products/fume-arm-4.png);
 }
 
 .item:nth-child(2) .item__img-wrap {
 	width: 1000px;
 	--aspect-ratio: 120/76;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/2.jpg);
+	--image: url(/images/products/exhaust-fan.png);
 }
 
 .item:nth-child(3) .item__img-wrap {
-	--aspect-ratio: 60/75;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/3.jpg);
+	width: 800px;
+	--aspect-ratio: 85/75;
+	--image: url(/images/products/modular-filter-system-see-through.webp);
 }
 
 .item:nth-child(4) .item__img-wrap {
 	width: 800px;
 	--aspect-ratio: 900/505;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/4.jpg);
+	--image: url(/images/products/welding-table.png);
 }
 
 .item:nth-child(5) .item__img-wrap {
 	--aspect-ratio: 6/8;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/5.jpg);
+	--image: url(/images/products/Klimaroll.png);
 }
 
 .item:nth-child(6) .item__img-wrap {
 	width: calc(100vw - 2rem);
 	--aspect-ratio: 1500/844;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/6.jpg);
+	--image: url(/images/products/sliding-rail.png);
 }
 
 .item:nth-child(7) .item__img-wrap {
 	width: 900px;
 	--aspect-ratio: 1000/749;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/7.jpg);
+	--image: url(/images/products/fume-arm-5.png);
 }
 
 .item:nth-child(8) .item__img-wrap {

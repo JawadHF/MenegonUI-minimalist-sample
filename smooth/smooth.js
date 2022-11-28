@@ -9,24 +9,26 @@
 
     // body element
     const body = document.body;
-    
+
     // calculate the viewport size
     let winsize;
-    const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
+    const calcWinsize = () =>
+        winsize = { width: window.innerWidth, height: window.innerHeight };
     calcWinsize();
     // and recalculate on resize
     window.addEventListener('resize', calcWinsize);
 
     // scroll position and update function
     let docScroll;
-    const getPageYScroll = () => docScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const getPageYScroll = () =>
+        docScroll = window.pageYOffset || document.documentElement.scrollTop;
     window.addEventListener('scroll', getPageYScroll);
 
     // Item
     class Item {
         constructor(el) {
             // the .item element
-            this.DOM = {el: el};
+            this.DOM = { el: el };
             // the inner image
             this.DOM.image = this.DOM.el.querySelector('.item__img');
             this.renderedStyles = {
@@ -35,9 +37,9 @@
                 // we interpolate between the previous and current value to achieve a smooth effect
                 innerTranslationY: {
                     // interpolated value
-                    previous: 0, 
+                    previous: 0,
                     // current value
-                    current: 0, 
+                    current: 0,
                     // amount to interpolate
                     ease: 0.1,
                     // the maximum value to translate the image is set in a CSS variable (--overflow)
@@ -53,10 +55,10 @@
                             Math.min(
                                 MathUtils.map(
                                     this.props.top - docScroll, //map current scroll position relative to element position
-                                    winsize.height, -1 * this.props.height, 
-                                    minValue, maxValue), 
-                                maxValue), 
-                                minValue)
+                                    winsize.height, -1 * this.props.height,
+                                    minValue, maxValue),
+                                maxValue),
+                            minValue)
                     }
                 }
             };
@@ -65,7 +67,9 @@
             // use the IntersectionObserver API to check when the element is inside the viewport
             // only then the element translation will be updated
             this.observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => this.isVisible = entry.intersectionRatio > 0);
+                entries.forEach(entry =>
+                    this.isVisible = entry.intersectionRatio > 0
+                );
             });
             this.observer.observe(this.DOM.el);
             // init/bind events
@@ -76,7 +80,7 @@
             // gets the item's height and top (relative to the document)
             this.getSize();
             // sets the initial value (no interpolation)
-            for (const key in this.renderedStyles ) {
+            for (const key in this.renderedStyles) {
                 this.renderedStyles[key].current = this.renderedStyles[key].previous = this.renderedStyles[key].setValue();
             }
             // translate the image
@@ -89,7 +93,7 @@
                 // item's height
                 height: rect.height,
                 // offset top relative to the document
-                top: docScroll + rect.top 
+                top: docScroll + rect.top
             }
         }
 
@@ -104,7 +108,7 @@
 
         render() {
             // update the current and interpolated values
-            for (const key in this.renderedStyles ) {
+            for (const key in this.renderedStyles) {
                 this.renderedStyles[key].current = this.renderedStyles[key].setValue();
                 this.renderedStyles[key].previous = MathUtils.lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].ease);
             }
@@ -123,7 +127,7 @@
 
         constructor() {
             // the <main> element
-            this.DOM = {main: document.querySelector('main')};
+            this.DOM = { main: document.querySelector('main') };
             // the scrollable element
             // we translate this element when scrolling (y-axis)
             this.DOM.scrollable = this.DOM.main.querySelector('div[data-scroll]');
@@ -136,9 +140,9 @@
             this.renderedStyles = {
                 translationY: {
                     // interpolated value
-                    previous: 0, 
+                    previous: 0,
                     // current value
-                    current: 0, 
+                    current: 0,
                     // amount to interpolate
                     ease: 0.1,
                     // current value setter
@@ -160,16 +164,16 @@
 
         update() {
             // sets the initial value (no interpolation) - translate the scroll value
-            for (const key in this.renderedStyles ) {
+            for (const key in this.renderedStyles) {
                 this.renderedStyles[key].current = this.renderedStyles[key].previous = this.renderedStyles[key].setValue();
-            }   
+            }
             // translate the scrollable element
             this.layout();
         }
 
         layout() {
             // translates the scrollable element
-            this.DOM.scrollable.style.transform = `translate3d(0,${-1*this.renderedStyles.translationY.previous}px,0)`;
+            this.DOM.scrollable.style.transform = `translate3d(0,${-1 * this.renderedStyles.translationY.previous}px,0)`;
         }
 
         setSize() {
@@ -193,22 +197,22 @@
 
         render() {
             // update the current and interpolated values
-            for (const key in this.renderedStyles ) {
+            for (const key in this.renderedStyles) {
                 this.renderedStyles[key].current = this.renderedStyles[key].setValue();
                 this.renderedStyles[key].previous = MathUtils.lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].ease);
             }
             // and translate the scrollable element
             this.layout();
-            
+
             // for every item
             for (const item of this.items) {
                 // if the item is inside the viewport call it's render function
                 // this will update the item's inner image translation, based on the document scroll value and the item's position on the viewport
-                if ( item.isVisible ) {
+                if (item.isVisible) {
                     item.render();
                 }
             }
-            
+
             // loop..
             requestAnimationFrame(() => this.render());
         }
@@ -216,7 +220,7 @@
 
     /***********************************/
     /********** Preload stuff **********/
-
+    /*
     // Preload images
     const preloadImages = () => {
         return new Promise((resolve, reject) => {
@@ -227,10 +231,13 @@
     // And then..
     preloadImages().then(() => {
         // Remove the loader
-        document.body.classList.remove('loading');
+        //document.body.classList.remove('loading');
         // Get the scroll position
         getPageYScroll();
         // Initialize the Smooth Scrolling
         new SmoothScroll();
     });
+    */
+    getPageYScroll();
+    new SmoothScroll();
 }

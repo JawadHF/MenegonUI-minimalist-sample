@@ -1074,12 +1074,16 @@ video {
     --translate-to: 7h;
 }
 
-/* .product-section-picture {
-    object-fit: contain;
-    max-width: 100px;
-    max-height: 200px;
+.product-section-picture {
+    --aspect-ratio: 1/1.5;
+	overflow: hidden;
+	width: 500px;
+	margin: 0 auto;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+	max-width: calc(100% - 2rem);
+	will-change: transform;
 }
-
+/*
 picture {
     object-fit: contain;
     max-width: 100px;
@@ -1092,10 +1096,21 @@ picture source {
     max-height: 200px;
 } 
 */
+
+/*
+.fume-extraction-arm-section picture img {
+    --overflow: 10px !important;
+}
+*/
+
 .product-section picture img {
     object-fit: contain;
     /* max-width: 700px; */
     max-height: 450px;
+
+    --overflow: 60px;
+
+    z-index: 10;
 }
 
 .product-section-content {
