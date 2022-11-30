@@ -36,6 +36,6 @@ userLanguages.forEach( userLanguage => {
 })
 
 const closelanguageRedirectNavigation = document.getElementById("ls-close");
-closelanguageRedirectNavigation.addEventListener("click", () => {
+closelanguageRedirectNavigation.onclick = () => {
     languageRedirectNavigation.classList.add("hidden-locale-switcher");
-})
+}
