@@ -29,7 +29,7 @@ let userLanguages = [...new Set(getBrowserLocales({languageCodeOnly: true}))];
 const languageRedirectNavigation = document.getElementById("locale-switcher-navigation");
 
 userLanguages.forEach( userLanguage => {
-    if(userLanguage === 'en') {
+    if(userLanguage === 'pl') {
         //show popup
         languageRedirectNavigation.classList.remove("hidden-locale-switcher");
     }
